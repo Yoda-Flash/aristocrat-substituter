@@ -33,15 +33,15 @@ func getKey(scanner *bufio.Scanner) string {
 	key = scanner.Text()
 	key = strings.TrimSpace(key)
 	key = strings.ToLower(key)
-	key += " "
+	key += " .,!?()=:;"
 	return key
 }
 
 func returnPlainMessage(codedMessage string, key string) string {
 	var plainMessage string
-	alphabet := "abcdefghijklmnopqrstuvwxyz "
+	alphabet := "abcdefghijklmnopqrstuvwxyz .,!?()=:;"
 	for i := 0; i < len(codedMessage); i++ {
-		for j := 0; j < 27; j++ {
+		for j := 0; j < 36; j++ {
 			if codedMessage[i] == key[j] {
 				plainMessage += string(alphabet[j])
 			}
