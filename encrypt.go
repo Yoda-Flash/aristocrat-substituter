@@ -2,16 +2,17 @@ package main
 
 import (
 	"fmt"
+	"log"
 )
 
 func getPlainMessage() {
 	var plainMessage string
 	fmt.Println("Please input your message:")
-	fmt.Scanln(&plainMessage)
+	count, err := fmt.Scanln(&plainMessage)
 	//plainMessage, err := fmt.Scanln(&plainMessage)
-	//if err != nil {
-	//	log.Fatal(err)
-	//}
+	if err != nil {
+		log.Fatal(err)
+	}
 	fmt.Println(plainMessage)
 }
 
