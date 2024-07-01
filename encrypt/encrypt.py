@@ -1,4 +1,4 @@
-plain_message = input("Please input your message \n").strip().lower()  #Strip to remove whitespace at front or back
+plain_message = input("Please input the message you wish to encrypt: \n").strip().lower()  #Strip to remove whitespace at front or back
 alphabet = "abcdefghijklmnopqrstuvwxyz "
 key = input("Please input the key, in alphabetical order with no spaces in between \n").strip().lower()
 key += " "
