@@ -8,7 +8,7 @@ plain_message = " "
 counter = 0
 
 for letter in coded_message:
-    for i in range(37):
+    for i in range(36):
         if letter == key[i]:
             plain_message += alphabet[i]
     counter += 1
